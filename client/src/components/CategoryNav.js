@@ -18,11 +18,12 @@ const CategoryNav = () => {
 
       <div className='flex flex-col gap-y-6 p-6'>
         {data?.map(Category => {
-          console.log(Category);
+          // console.log(Category);
 
-          return <Link>
+          return <Link
+           to={`/Products/${Category.id}`} className='cursor-pointer uppercase' key={Category.id}>
 
-            Category
+        {Category.attributes.title}
 
 
           </Link>

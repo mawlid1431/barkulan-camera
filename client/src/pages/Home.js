@@ -1,15 +1,11 @@
-import React from 'react';
+import React from "react";
 
+//  importing Components
 
-
-
-
-//  importing Components 
-
-import LatestProducts from '../components/LatestProducts.js';
+import LatestProducts from "../components/LatestProducts.js";
+import Hero from "../components/Hero.js";
 
 const Home = () => {
-
   // const { data } = useFetch('/products?populate=*&filters[isNew]=true');
 
   // // const { data } = useFetch('/products?populate=*');
@@ -17,18 +13,12 @@ const Home = () => {
 
   // console.log(data)
 
-
   return (
-
-<section>
-
-<LatestProducts/> 
-
-</section>
-
-
+    <section>
+      <Hero />
+      <LatestProducts />
+    </section>
   );
-
 };
 
 export default Home;

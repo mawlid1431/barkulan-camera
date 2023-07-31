@@ -1,35 +1,34 @@
 import React from 'react';
 
 
-///using fetching hooks
-import useFetch from '../hooks/useFetch.js';
+
 
 
 //  importing Components 
 
-import ProductSlider from '../components/ProductSlider';
+import LatestProducts from '../components/LatestProducts.js';
 
 const Home = () => {
 
-  const { data } = useFetch('/products?populate=*&filters[isNew]=true');
+  // const { data } = useFetch('/products?populate=*&filters[isNew]=true');
 
-  // const { data } = useFetch('/products?populate=*');
-  // console.log("I can see the Data")
+  // // const { data } = useFetch('/products?populate=*');
+  // // console.log("I can see the Data")
 
   // console.log(data)
 
 
-  return <div className='mb-16'>
-    <div className='container max-auto'>
+  return (
 
-      <h2 className='h2 mb-6 text-center xl:text-left'> Latest products </h2>
+<section>
+
+<LatestProducts/> 
+
+</section>
 
 
-    </div>
+  );
 
-    < ProductSlider data={data} />
-    {/* checck on that */}
-  </div>;
 };
 
 export default Home;
